@@ -1,0 +1,195 @@
+{
+  "dataset_name": "Ares Dawn Chronicle - RAG evaluation set",
+  "source_document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+  "total_questions": 10,
+  "ragas_fields": {
+    "user_input": "question",
+    "reference": "ground-truth answer",
+    "reference_contexts": "supporting passages from the PDF"
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "question_type": "single_fact",
+      "answerable": true,
+      "user_input": "When did humans first land on Mars, and who took the first step?",
+      "reference": "Humans first landed on Mars on 16 April 2036, when the lander Cinder touched down at 14:22 UTC at Arcadia Planitia. Commander Dr. Elena Voskresenskaya took the first step on the surface at 17:41 UTC that day.",
+      "reference_contexts": [
+        "Cinder touched down on 16 April 2036 at 14:22 UTC, only 74 meters from the target marked by the Hermes cargo landers. The landing was declared Sol 1 of the Meridian calendar.",
+        "After a 3-hour systems check, Commander Voskresenskaya opened the hatch and, at 17:41 UTC, took the first step on Mars."
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 4,
+          "section": "Chapter 3: Transit and Landing"
+        },
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 1,
+          "section": "Executive Summary"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "question_type": "single_fact",
+      "answerable": true,
+      "user_input": "What specific impulse did the Bergstrom Nuclear Thermal Engine reach, who designed it, and when was the qualification test?",
+      "reference": "The Bergstrom Nuclear Thermal Engine (BNTE) reached a specific impulse of 940 seconds in its qualification test on 22 August 2031. It was designed by Dr. Lars Bergstrom, a Swedish propulsion physicist at the Uppsala Institute of Space Technology.",
+      "reference_contexts": [
+        "The decisive technical breakthrough was the Bergstrom Nuclear Thermal Engine (BNTE), designed by Dr. Lars Bergstrom, a Swedish propulsion physicist at the Uppsala Institute of Space Technology. The BNTE reached a specific impulse of 940 seconds in its qualification test on 22 August 2031, roughly double that of the best chemical rockets."
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 2,
+          "section": "Chapter 1: The Consortium and the Road to Mars"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "question_type": "single_fact",
+      "answerable": true,
+      "user_input": "How many applicants were there for the Ares Dawn crew selection, and from how many countries?",
+      "reference": "There were 31,400 applicants from 67 countries, and the process lasted four years before the crew of eight was announced on 21 March 2034.",
+      "reference_contexts": [
+        "The crew of eight was announced on 21 March 2034 after a four-year selection process that began with 31,400 applicants from 67 countries."
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 3,
+          "section": "Chapter 2: The Crew and the Spacecraft"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "question_type": "multi_detail",
+      "answerable": true,
+      "user_input": "How long did the global dust storm of 2036 last, and what happened to the settlement's solar power?",
+      "reference": "The storm began on Sol 94 (21 July 2036) and lasted 38 sols, ending on Sol 131 (28 August 2036). Solar power output dropped from 85 kilowatts to just 4 kilowatts, so the crew relied on the two fission reactors producing 80 kilowatts.",
+      "reference_contexts": [
+        "On Sol 94 (21 July 2036), a regional dust storm in the southern hemisphere merged with two other storms and grew into a planet-encircling event.",
+        "Solar power output dropped from 85 kilowatts to just 4 kilowatts. The storm lasted 38 sols, until Sol 131 (28 August 2036)",
+        "During the storm, the crew depended on the two fission reactors, whose output of 80 kilowatts barely covered the minimum needs of 71 kilowatts."
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 5,
+          "section": "Chapter 4: The First 100 Sols and the Great Dust Storm"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "question_type": "causal",
+      "answerable": true,
+      "user_input": "What caused the Module C airlock failure on Sol 922, and why was the crack not detected earlier?",
+      "reference": "A fatigue crack only 1.3 millimeters long had formed in a titanium door frame. Repeated thermal cycling between minus 78 and plus 3 degrees Celsius weakened the weld. A routine inspection on Sol 880 missed it because the ultrasonic scanner was calibrated for Earth temperatures.",
+      "reference_contexts": [
+        "The board found that a fatigue crack, only 1.3 millimeters long, had formed in a titanium door frame. Repeated thermal cycling between minus 78 degrees Celsius at night and plus 3 degrees Celsius by day had weakened the weld. A routine inspection on Sol 880 had missed the crack because the ultrasonic scanner was calibrated for Earth temperatures."
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 7,
+          "section": "Chapter 6: Tragedy at Module C - The Investigation"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "question_type": "multi_detail",
+      "answerable": true,
+      "user_input": "At what depth was the Raghunathan Layer found, and what chemical evidence suggested biological origin?",
+      "reference": "On 7 October 2041, at a depth of 212 meters, the drill extracted a core showing a carbon-13 depletion of minus 34 per mil, consistent with biological carbon fixation. The mudstone also held 0.7 percent organic carbon by weight, 12 times higher than any previous Mars sample, and was estimated to be 3.6 billion years old.",
+      "reference_contexts": [
+        "On 7 October 2041, at a depth of 212 meters, the drill extracted a 3-meter core of fine-grained, dark gray mudstone.",
+        "Chemical analysis showed a carbon-13 depletion of minus 34 per mil, a ratio consistent with biological carbon fixation. The mudstone also contained 0.7 percent organic carbon by weight, which was 12 times higher than any previous Mars sample. The age of the layer was estimated at 3.6 billion years."
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 8,
+          "section": "Chapter 7: The Raghunathan Layer"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "question_type": "multi_detail",
+      "answerable": true,
+      "user_input": "Who was the first child born on Mars, when, and who were the parents?",
+      "reference": "Lucia Marchetti-Adjei was born on 3 March 2040 at the Meridian Medical Center. Her mother was pilot Sofia Marchetti and her father was chief engineer Dr. Kwame Adjei-Mensah. She weighed 2.9 kilograms.",
+      "reference_contexts": [
+        "The first child born on Mars, Lucia Marchetti-Adjei, arrived on 3 March 2040 at the Meridian Medical Center. Her mother was pilot Sofia Marchetti, aged 43, and her father was chief engineer Dr. Kwame Adjei-Mensah, aged 49. She weighed 2.9 kilograms and measured 49 centimeters."
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 9,
+          "section": "Chapter 8: Governance, Growth and the First Martian Child"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "question_type": "numerical_reasoning",
+      "answerable": true,
+      "user_input": "By what percentage did the cost of launching one kilogram to Mars fall between 2035 and 2050?",
+      "reference": "The cost fell from 1.9 million US dollars in 2035 to 48,000 US dollars in 2050, a reduction of about 97.5 percent.",
+      "reference_contexts": [
+        "The cost of launching one kilogram from Earth to Mars fell from 1.9 million US dollars in 2035 to 48,000 US dollars in 2050, a reduction of 97.5 percent"
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 10,
+          "section": "Chapter 9: Economy, Independence and the Twentieth Anniversary"
+        },
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 1,
+          "section": "Key Facts at a Glance"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "question_type": "multi_hop",
+      "answerable": true,
+      "user_input": "Who chaired the board that investigated the Module C accident, what was his role on the Ares Dawn crew, and what did the safety overhaul cost?",
+      "reference": "The investigation board was chaired by Dr. Kwame Adjei-Mensah, who served as chief engineer for propulsion on the Ares Dawn crew. The safety overhaul cost 640 million US dollars.",
+      "reference_contexts": [
+        "A 7-member investigation board, chaired by Dr. Kwame Adjei-Mensah, issued its report on 6 March 2039.",
+        "The cost of the safety overhaul was 640 million US dollars.",
+        "Dr. Kwame Adjei-Mensah | Chief engineer, propulsion | Ghana | 44"
+      ],
+      "sources": [
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 7,
+          "section": "Chapter 6: Tragedy at Module C"
+        },
+        {
+          "document": "Ares_Dawn_Mars_Settlement_Fictional_Chronicle.pdf",
+          "page": 3,
+          "section": "The Ares Dawn Crew (table)"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "question_type": "unanswerable",
+      "answerable": false,
+      "user_input": "What was Lucia Marchetti-Adjei's weight at age 10?",
+      "reference": "The document does not provide this information. It gives her birth weight (2.9 kilograms) and says that at age 5 she was 4.2 centimeters taller than Earth-born peers with 8 percent lower bone density, but not her weight at age 10.",
+      "reference_contexts": [],
+      "sources": []
+    }
+  ]
+}

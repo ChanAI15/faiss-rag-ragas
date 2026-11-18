@@ -1,0 +1,10 @@
+python-dotenv
+# Native Windows has an official CPU-only FAISS package. For CUDA GPU FAISS,
+# use environment-gpu.yml in WSL2 or Linux.
+faiss-cpu
+numpy
+PyMuPDF
+google-genai
+pytest
+ragas
+datasets

@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+storage/*.faiss
+storage/chunks.json
+storage/extracted/
+output/
+data/documents/*
+!data/documents/.gitkeep
